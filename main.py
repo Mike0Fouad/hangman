@@ -6,13 +6,13 @@ from figures import*
 
 # initializing variables, taking input and getting the word and hiding it
 print("                                     Welcome to "+welcome)
-word= list(rand_word(input("\nEnter a difficulty level (easy, medium, hard):  ")))
+word= list(rand_word(input("\nEnter a difficulty level (easy, medium, hard):  ").lower()))
 life=0
 hidden= list(hide_word(word))
 # printing the hidden word
 print(spaced(stringfy(hidden)))
 # while loop to keep the game going until the player wins or loses
-while True:
+while word != False:
     # taking input and checking if the letter is in the word
     letter=input("\nGuess a letter: ").lower()
     if letter in word:
@@ -22,12 +22,13 @@ while True:
 
                 hidden[i] = letter
         print("********************\n       correct!\n********************".upper())
-        print(spaced(stringfy(hidden)))
+        
         
     else:
         # if the letter is not in the word, the life is decreased and the hangman figure is printed
         life+=1
         print("********************\n       wrong!!\n********************".upper())
+    print(spaced(stringfy(hidden)))
     # printing the hangman figure
     print(hangman[life])
     

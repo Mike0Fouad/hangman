@@ -23,12 +23,16 @@ def rand_word(difficulty):
     choosen=""
     if difficulty== "easy":
         choosen=easy_words[random.randint(0,len(easy_words)-1)]
+        return choosen
     elif difficulty== "medium":
         choosen=medium_words[random.randint(0,len(medium_words)-1)]
+        return choosen
     elif difficulty == "hard":
         choosen=hard_words[random.randint(0,len(hard_words)-1)]
+        
     else:
         print("pls select a proper difficulty from the choices")
+        choosen= False
     return choosen
 # function to convert a list into a string
 def stringfy(list):
