@@ -9,11 +9,11 @@ print("                                     Welcome to "+welcome)
 
 
 
-word= list(rand_word(input("Enter a difficulty level (easy, medium, hard):  ")))
+word= list(rand_word(input("\nEnter a difficulty level (easy, medium, hard):  ")))
 hidden= list(hide_word(word))
 print(spaced(stringfy(hidden)))
 while True:
-    letter=input("Guess a letter: ").lower()
+    letter=input("\nGuess a letter: ").lower()
     if letter in word:
         for i in range (0,len(word)):
 
