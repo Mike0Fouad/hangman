@@ -1,5 +1,6 @@
 #words for hangman game depending on levels
 import random
+# lists of words for each difficulty
 easy_words = ["apple", "banana", "cat", "dog", "elephant", "flower", "guitar", "house", "igloo", "jacket",
               "kite", "lemon", "mouse", "notebook", "orange", "pencil", "quilt", "rabbit", "sun", "turtle",
               "umbrella", "violin", "watermelon", "xylophone", "zebra", "bicycle", "candle", "duck", "eagle",
@@ -17,7 +18,7 @@ hard_words = ["acquaintance", "bewilderment", "cryptocurrency", "discombobulate"
               "logorrhea", "magnanimous", "nihilism", "onomatopoeia", "pneumonoultramicroscopicsilicovolcanoconiosis", "quintessential", "recalcitrant", "serendipity", "tyrannosaurus", "ubiquitous",
               "verisimilitude", "wunderkind", "xerophthalmia", "yoctosecond", "zeitgeist", "abracadabra", "ballyhoo", "cacophony", "dodecahedron", "ephemeral",
               "facetious", "gobbledygook", "hodgepodge", "jejune", "kaleidoscope", "labyrinthine", "mnemonic", "onomatopoeia", "peregrinate", "quizzaciously"]
-
+# function to choose a random word from the list of words depending on the difficulty
 def rand_word(difficulty):
     choosen=""
     if difficulty== "easy":
@@ -29,7 +30,7 @@ def rand_word(difficulty):
     else:
         print("pls select a proper difficulty from the choices")
     return choosen
-
+# function to convert a list into a string
 def stringfy(list):
     string=""
     for i in range (len(list)):
@@ -42,7 +43,7 @@ def spaced(string):
     return spaced
         
         
-
+# function to hide the word
 def hide_word(word):
     hidden=""
     for i in range(len(word)):
